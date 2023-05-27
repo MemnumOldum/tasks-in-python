@@ -1,3 +1,10 @@
+# Описание проекта: требуется написать программу, способную шифровать и дешифровать текст в соответствии с алгоритмом Цезаря. 
+# Она должна запрашивать у пользователя следующие данные:
+# - направление: шифрование или дешифрование;
+# - язык алфавита: русский или английский;
+# - шаг сдвига (со сдвигом вправо).
+
+
 method = input('Вас приветствует программа: Шифр Цезаря. Вы хотите зашифровать или расшифровать текст? (1 - шифрование / 2 - дешифрование) \n')
 while method != '1' and method != '2':
     method = input('Введите цифру 1 или 2 \n')
@@ -14,17 +21,6 @@ engBIG = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 engSmall = 'abcdefghijklmnopqrstuvwxyz'
 rusBIG = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 rusSmall = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
-
-# if method == '1':
-#     print(True)
-#     if lang == '2':
-#         print(True)
-#         for i in range(len(text)):
-#             print(text[i], rusBIG[(rusBIG.find(text[i]))])
-#             if text[i] in rusBIG:
-#                 text = text[:i] + rusBIG[(rusBIG.find(text[i]) + step) % 32] + text[i + 1:]
-#             elif text[i] in rusSmall:
-#                 text = text[:i] + rusSmall[(rusSmall.find(text[i]) + step) % 32] + text[i + 1:]
 
 def caesar_cipher(method, lang, step, text):
     if method == '1':
